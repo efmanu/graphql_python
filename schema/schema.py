@@ -57,6 +57,7 @@ class UserObject(SQLAlchemyObjectType):
     class Meta:
         model = UserModel
         interfaces = (relay.Node,)
+        exclude_fields = ('user_id',) 
 
 
 class Query(graphene.ObjectType):
